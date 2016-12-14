@@ -1,0 +1,209 @@
+@import url(http://fonts.googleapis.com/css?family=Ubuntu);
+
+/********************************************
+ANIMATED INPUT FIELD
+********************************************/
+body {
+  font-family: 'Ubuntu', sans-serif;
+  background: #333;
+  padding-top: 5%;
+}
+.container {width: 90%; margin: 0 auto;}
+h1 {
+  font-size: 2em;
+  padding: 10px;
+  text-align: center;
+  color: #fff;
+}
+/* STYLE FORM INPUT */
+.form-group {
+	position: relative;
+	margin-top: 60px;
+	margin-bottom: 20px;
+    width: 40%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+a{
+    text-decoration: none;
+}
+.input-group {
+	position: relative;
+}
+
+.form-control{
+    color: #fff;
+}
+
+.random {
+    margin-top: 40px;
+    background: transparent;
+    border-radius: 5px;
+    border: 2px solid #e5536b;
+    color: #fff;
+    padding: 5px;
+    margin-bottom: 20px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    
+}
+
+.random:hover {
+    cursor:pointer;
+}
+
+
+.article-container{
+    margin-top: 90px;
+}
+.fields{
+    background:  rgba(255, 255, 255, 0.3);
+    color: #000;
+    border-radius: 5px;
+}
+
+.article-container a{
+    text-decoration: none;
+}
+
+.fields:hover {
+    border-left: 6px solid #e5536b;
+
+    transition: all .5s ease;
+}
+.fields h3{
+ text-align: left;
+ margin-left: 20px;
+ font-size: 1em;
+ padding-top: 20px;
+
+}
+
+.fields p {
+    font-size: .6em;
+    text-align: left;
+ margin-left: 16px;
+ padding-bottom: 20px;
+ font-family: "sans-serif";
+}
+.form-control {
+	display: block;
+	height: 36px;
+	width: 100%;
+	border: none;
+	border-radius: 0 !important;
+	font-size: 16px;
+	font-weight: 300;
+	padding: 0;
+	background-color: transparent;
+	box-shadow: none;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+.input-group .form-control {
+	position: relative;
+	z-index: inherit;
+	float: inherit;
+	width: 100%;
+	margin-bottom: 0;
+}
+.form-control:focus {
+	border-color: #7c7c7c;
+	outline: none;
+	box-shadow: none;
+}
+
+/* FORM LABEL STYLE- */
+label {
+	position: absolute;
+	top: -18px;
+	color: rgba(255, 255, 255, 0.5);
+	font-size: 12px;
+	font-weight: 300;
+	transition: 0.2s ease all;
+	-moz-transition: 0.2s ease all;
+	-webkit-transition: 0.2s ease all;
+}
+.form-horizontal .control-label {
+	position: relative;
+	top: 0;
+	margin-bottom: 0;
+}
+.float-label {
+	left: 0;
+	top: 7px;
+	font-size: 16px;
+	pointer-events: none;
+}
+
+/* LABEL ACTIVE STATE */
+.form-control:focus ~ .float-label, .form-control:valid ~ .float-label {
+	top: -18px;
+	font-size: 12px;
+}
+
+/* INPUT DEFAULT COLOR */
+.form-control:focus ~ label {  color: #e5536b; }
+label ~ .form-bar:before, label ~ .form-bar:after {background: #e5536b; }
+.form-control:valid ~ .control-label {}
+
+/* FROM BAR STYLE*/
+.form-bar {
+	position: relative;
+	display: block;
+	width: 100%;
+}
+.form-bar:before, .form-bar:after 	{
+	content: '';
+	height: 1px;
+	width: 0;
+	bottom: 0;
+	position: absolute;
+	transition: 0.3s ease all;
+	-moz-transition: 0.3s ease all;
+	-webkit-transition: 0.3s ease all;
+}
+.form-bar:before {
+	left: 50%;
+}
+.form-bar:after {
+	right: 50%;
+}
+
+/* active state */
+.form-control:focus ~ .form-bar:before, .form-control:focus ~ .form-bar:after {
+	width: 50%;
+}
+
+/*HIGHLIGHT STYLE*/
+.form-highlight {
+	position: absolute;
+	height: 60%;
+	width: 60px;
+	top: 25%;
+	left: 0;
+	pointer-events: none;
+	opacity: 0.4;
+}
+
+/* HIGHLIGHT ACTIVE STYLE */
+.form-control:focus ~ .form-highlight {
+	-webkit-animation: inputHighlighter 0.3s ease;
+	-moz-animation: inputHighlighter 0.3s ease;
+	animation: inputHighlighter 0.3s ease;
+}
+
+/* HIGHLIGHTER ANIMATION*/
+@-webkit-keyframes inputHighlighter {
+	from { background:#e5536b; }
+	to { width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+	from { background:#e5536b; }
+	to { width:0; background:transparent; }
+}
+@keyframes inputHighlighter {
+	from { background:#e5536b; }
+	to { width:0; background:transparent; }
+}
